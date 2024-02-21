@@ -1,0 +1,13 @@
+# Blender 4.0.1 MTL File: 'Dizzy.blend'
+# www.blender.org
+
+newmtl DizzyMain
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd textures/Dizzy_BaseColor.png
+map_Ns textures/Dizzy_Roughness.png
+map_Ke textures/Dizzy_Emit.png
+map_Bump -bm 1.000000 textures/Dizzy_Normal.png
