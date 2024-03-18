@@ -15,12 +15,6 @@ const dimensions = {
 const objloader = new OBJLoader();
 const mtlloader = new MTLLoader();
 
-// const geometry = new THREE.SphereGeometry(1, 32, 32);
-// const material = new THREE.MeshStandardMaterial({ color: 0xff0000 });
-// const mesh = new THREE.Mesh(geometry, material);
-// scene.add(mesh);
-// load a resource
-
 var mesh;
 var material;
 mtlloader.load(
@@ -43,28 +37,7 @@ mtlloader.load(
     console.log("An error happened");
   }
 );
-// objloader.load(
-//   // resource URL
-//   "models/Dizzy.obj",
-//   function (object) {
-//     object.traverse(function (child) {
-//       if (child instanceof THREE.Mesh) {
-//         // child.material = material
-//         child.material = material
-//         mesh = child;
-//       }
-//     });
-//     // object.setMaterials(material);
 
-//     scene.add(mesh);
-//   },
-//   function (xhr) {
-//     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-//   },
-//   function (error) {
-//     console.log("An error happened");
-//   }
-// );
 
 const light = new THREE.PointLight(0xffffff, 1000);
 light.position.set(10, 10, 10);
@@ -79,7 +52,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.z = 2;
+camera.position.z = 1;
 scene.add(camera);
 
 const canvas = document.querySelector(".webgl");
